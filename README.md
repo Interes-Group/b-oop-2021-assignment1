@@ -38,7 +38,38 @@ V projekte upravujte iba súbory v priečinku _src/main_ a jeho podpriečinkoch.
 
 Vo svojom github účte si nastavte svoje meno (settings > profile > name), aby bolo možné priradiť riešenie ku študentovy. **Pokiaľ nebude možné spárovať študenta s riešením je zadanie hodnotené 0 bodmi!**
 
-[comment]: <> (# Assignment 1 - Monopoly lite)
+# Assignment 1 - Monopoly lite
+B-OOP 2021
 
-[comment]: <> (B-OOP 2021)
+Your task is to create a simplified version of the board game Monopoly in the form of a Java console application. The board consists of the following 24 tiles:
 
+* 4 corner tiles (start, jail, police (go to jail), tax payment)
+* 4 chance tiles (the game must have at least 5 chance cards)
+* 16 property tiles
+
+The game starts by inputting the number and names of all the players. After the names have been put in, the game starts. The first player rolls the dice and move their character the corresponding number of tiles. When a player steps on a tile, the effect of the tile triggers. Tile effects:
+
+* jail - the player is just visiting the jail
+* police - imprison the player for X turns
+* tax payment - the player must pay a specific amount to the bank
+* chance - the player draws a chance card from a deck, and the effect of the drawn card is triggered. The players always draw a new card from the deck - not a random one. After the entire deck is drawn, the cards are put back in to the deck, and they can be drawn again.
+* property - the player can buy the property for a specific cost if they have enough money and if the property doesn't have an owner. If the property belongs to another player, the player that stepped on the property must pay a "visiting fee" to the owner. The price and visiting fee of each property is fixed.
+
+When a player passes the start tile, they receive some money. If a player can not pay the tax, or a visiting fee they loose the game. The game ends when there is only one player remaining.
+
+## Grading
+You can get 10 points for this assignment. **The program must be able to compile, otherwise 0 points are given for the assigment**. The github pipeline checks whether the program can be compiled. The main focus during grading is put on object-oriented approach and principles used by the solution. Including, but not limited to:
+* appropriate naming of classes and methods in a single language (class names starting with a capital letter, method names starting with a lowercase letter),
+* appropriate use of access modifiers (public, private, or protected) when restricting access to class methods and attributes
+* the use of inheritance and polymorphism
+* usage of exceptions when handling undesired behavior (do not catch or throw the instances of the generic Exception class)
+* don't use nested classes
+* don't use static methods (you don't need them to complete the assignment)
+* don't put any logic into the main method and its class. The main method should only be used to create a new object
+
+## Handing in the assigment
+Clone the assignment form your repository created from this template. Upload your solutions to your repository using the Git version control system (git commit + git push). You can push commits to the repository while you work - you don't have to push everything at once. Only the code in the _master_ branch will be graded. You have until **26.3.2021 23:00** to complete the assignment.
+
+Only edit files in the _src/main_ folder or its sub-folders. You mustn't change any other files in the repository (especially the _pom.xml_ file, and the github pipeline files).
+
+You have to have your name set in your github account (settings > profile > name), so that we can match students with their assignments. **If we are unable to match a student with their assignment, the student will receive 0 points for the assignment!**
